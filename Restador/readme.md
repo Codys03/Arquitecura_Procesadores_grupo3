@@ -147,3 +147,24 @@ Si el resultado es negativo, se toma el complemento a dos para obtener el valor 
 ```verilog
 assign Resultado = (Signo) ? (~Suma + 1) : Suma;
 ```
+## Simulación 
+![simulación](/)
+En la simulación presentada, podemos observar la operación de un restador de 4 bits a través de las señales correspondientes a las entradas A[3:0] y B[3:0], el resultado Resultado[3:0], el indicador de signo Signo, y la señal de acarreo de salida C_out. Los valores de las entradas A y B se configuran inicialmente como A = 4 (en binario 0100) y B = 8 (en binario 1000), lo que significa que se está realizando la operación 
+4
+−
+8
+4−8.
+
+En la simulación, se observa que:
+
+Resultado es 4, lo que sugiere que el módulo ha interpretado la resta como negativa y ha tomado el valor absoluto del resultado (8 - 4 = 4).
+Signo es 1, lo que indica que el resultado de la resta original fue negativo. Dado que 
+4
+−
+8
+=
+−
+4
+4−8=−4, el indicador de signo correctamente refleja este resultado negativo.
+C_out es 0, lo que indica que se ha producido un "borrow" en la operación de resta, ya que el minuendo (A = 4) era menor que el sustraendo (B = 8), lo que requiere un préstamo en el proceso de la operación de resta binaria.
+La simulación parece estar funcionando según lo esperado, ya que el indicador de signo refleja correctamente un resultado negativo, y el valor absoluto del resultado también es correcto (4 en lugar de -4, en binario positivo). Sin embargo, es interesante notar que C_out es 0, confirmando que en la operación de resta hubo un "borrow", ya que la resta fue de un número menor a uno mayor. Esto implica que la lógica del complemento a dos se está ejecutando correctamente.
