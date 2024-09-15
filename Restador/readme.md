@@ -148,7 +148,8 @@ Si el resultado es negativo, se toma el complemento a dos para obtener el valor 
 assign Resultado = (Signo) ? (~Suma + 1) : Suma;
 ```
 ## Simulación 
-![simulación](/imagenes/tb_res1%20(1).jpeg)
+![again](/imagenes/tb_res4.jpeg)
+
 
 En la simulación presentada, se puede observar la operación de un restador de 4 bits a través de las señales correspondientes a las entradas ``A[3:0]`` y ``B[3:0]``, el resultado ``Resultado[3:0]``, el indicador de signo ``Signo``, y la señal de acarreo de salida ``C_out``. Los valores de las entradas ``A`` y ``B`` se configuran inicialmente como ``A = 4`` (en binario 0100) y ``B = 8`` (en binario 1000), lo que significa que se está realizando la operación ``4−8``.
 
@@ -169,9 +170,10 @@ Cuando esto ocurre en una resta de números binarios usando el complemento a dos
 
 Aquí se muestran mas testbench aplicando restas de manera efectiva 
 
-![mas tb](/imagenes/tb_res2.jpeg)
 
-![again](/imagenes/tb_res4.jpeg)
+![simulación](/imagenes/tb_res1%20(1).jpeg)
+
+![simula](/imagenes/tb_res3.jpeg)
 
 De forma mas detallada se muestran las operaciones de forma directa sacadas del codigo del testbench
 
