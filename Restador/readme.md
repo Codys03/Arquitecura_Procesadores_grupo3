@@ -172,3 +172,9 @@ Aquí se muestran mas testbench aplicando restas de manera efectiva
 ![mas tb](/imagenes/tb_res2.jpeg)
 
 ![again](/imagenes/tb_res4.jpeg)
+
+De forma mas detallada se muestran las operaciones de forma directa sacadas del codigo del testbench
+
+![op](/imagenes/tb_op%20(1).jpeg)
+
+![op2](/imagenes/tb_op_2.jpeg)
