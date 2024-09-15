@@ -148,23 +148,27 @@ Si el resultado es negativo, se toma el complemento a dos para obtener el valor 
 assign Resultado = (Signo) ? (~Suma + 1) : Suma;
 ```
 ## Simulación 
-![simulación](/)
-En la simulación presentada, podemos observar la operación de un restador de 4 bits a través de las señales correspondientes a las entradas A[3:0] y B[3:0], el resultado Resultado[3:0], el indicador de signo Signo, y la señal de acarreo de salida C_out. Los valores de las entradas A y B se configuran inicialmente como A = 4 (en binario 0100) y B = 8 (en binario 1000), lo que significa que se está realizando la operación 
-4
-−
-8
-4−8.
+![simulación](/imagenes/tb_res1%20(1).jpeg)
+
+En la simulación presentada, se puede observar la operación de un restador de 4 bits a través de las señales correspondientes a las entradas ``A[3:0]`` y ``B[3:0]``, el resultado ``Resultado[3:0]``, el indicador de signo ``Signo``, y la señal de acarreo de salida ``C_out``. Los valores de las entradas ``A`` y ``B`` se configuran inicialmente como ``A = 4`` (en binario 0100) y ``B = 8`` (en binario 1000), lo que significa que se está realizando la operación ``4−8``.
 
 En la simulación, se observa que:
 
-Resultado es 4, lo que sugiere que el módulo ha interpretado la resta como negativa y ha tomado el valor absoluto del resultado (8 - 4 = 4).
-Signo es 1, lo que indica que el resultado de la resta original fue negativo. Dado que 
-4
-−
-8
-=
-−
-4
-4−8=−4, el indicador de signo correctamente refleja este resultado negativo.
-C_out es 0, lo que indica que se ha producido un "borrow" en la operación de resta, ya que el minuendo (A = 4) era menor que el sustraendo (B = 8), lo que requiere un préstamo en el proceso de la operación de resta binaria.
-La simulación parece estar funcionando según lo esperado, ya que el indicador de signo refleja correctamente un resultado negativo, y el valor absoluto del resultado también es correcto (4 en lugar de -4, en binario positivo). Sin embargo, es interesante notar que C_out es 0, confirmando que en la operación de resta hubo un "borrow", ya que la resta fue de un número menor a uno mayor. Esto implica que la lógica del complemento a dos se está ejecutando correctamente.
+* El resultado es 4, lo que sugiere que el módulo ha interpretado la resta como negativa y ha tomado el valor absoluto del resultado ``(8 - 4 = 4)``.
+
+* El signo es `` 1``, lo que indica que el resultado de la resta original fue negativo. Dado que ``4−8=−4``, el indicador de signo refleja correctamente este resultado negativo.
+* ``C_out`` es ``0``, lo que indica que se ha producido un "borrow" en la operación de resta, ya que el minuendo (A = 4) era menor que el sustraendo (B = 8), lo que requiere un préstamo en el proceso de la operación de resta binaria.
+
+La simulación parece estar funcionando según lo esperado, ya que el indicador de signo refleja correctamente un resultado negativo, y el valor absoluto del resultado también es correcto (4 en lugar de -4, en binario positivo). Sin embargo, es importante notar que ``C_out`` es ``0``, confirmando que en la operación de resta hubo un "borrow", ya que la resta fue de un número menor a uno mayor. Esto implica que la lógica del complemento a dos se está ejecutando correctamente.
+
+### Borrow en Circuitos Lógicos
+
+En el contexto de circuitos digitales, el "borrow" indica que un "préstamo" fue necesario porque la columna de bits del minuendo (el número del que se está restando) era menor que la columna correspondiente del sustraendo (el número que se está restando).
+
+Cuando esto ocurre en una resta de números binarios usando el complemento a dos, el "borrow" puede reflejarse como un bit de acarreo (carry out, ``C_out``) que no es el esperado, o más comúnmente, como un resultado que tiene un bit de signo negativo.
+
+Aquí se muestran mas testbench aplicando restas de manera efectiva 
+
+![mas tb](/imagenes/tb_res2.jpeg)
+
+![again](/imagenes/tb_res4.jpeg)
