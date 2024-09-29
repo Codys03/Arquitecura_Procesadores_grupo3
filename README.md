@@ -15,6 +15,7 @@ Este repositorio contiene los laboratorios esenciales para el desarrollo de un s
 ## Corte 2
 
 1. [ALU](ALU/readme.md)
+2. [decodificador](/Decodificador/readme.md)
 
 
 # Referencias
