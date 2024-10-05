@@ -35,7 +35,6 @@ El módulo en Verilog encapsula la lógica de la ALU y define sus entradas y sal
 
 Este código reutiliza varios módulos para realizar las operaciones individuales de suma, resta y multiplicación:
 
-```verilog
 sum4b s0(.A(A), .B(B), .Ci('b0), .Cout(C_out_s), .Sum(resul_sum));
 Restador r0(.A(A), .B(B), .Resultado(resul_res), .Signo(Signo), .sel(sel), .C_out(C_out));
 multiplicador m0(.clk(clk), .init(init), .MR(r_bitsA), .MD(r_bitsB), .done(done), .pp(resul_mult));
@@ -52,7 +51,6 @@ decoder deco(.num(resul), .Sseg(dis));
 
 El bloque `always` determina qué operación realiza la ALU según el valor de `OP`:
 
-```verilog
 always @(*) begin
 	case (OP)
 		2'b00: resul <= {2'b0, resul_sum};  // Suma
@@ -78,6 +76,7 @@ assign r_bitsB = B[2:0];
 El módulo decoder convierte el resultado en un formato que puede ser mostrado en un display de 7 segmentos:
 
 decoder deco(.num(resul), .Sseg(dis));
+
 
 
 
