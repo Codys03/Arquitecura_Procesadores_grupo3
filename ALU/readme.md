@@ -35,10 +35,10 @@ El módulo en Verilog encapsula la lógica de la ALU y define sus entradas y sal
 
 Este código reutiliza varios módulos para realizar las operaciones individuales de suma, resta y multiplicación:
 
-sum4b s0(.A(A), .B(B), .Ci('b0), .Cout(C_out_s), .Sum(resul_sum));
-Restador r0(.A(A), .B(B), .Resultado(resul_res), .Signo(Signo), .sel(sel), .C_out(C_out));
-multiplicador m0(.clk(clk), .init(init), .MR(r_bitsA), .MD(r_bitsB), .done(done), .pp(resul_mult));
-decoder deco(.num(resul), .Sseg(dis));
++ sum4b s0(.A(A), .B(B), .Ci('b0), .Cout(C_out_s), .Sum(resul_sum));
++ Restador r0(.A(A), .B(B), .Resultado(resul_res), .Signo(Signo), .sel(sel), .C_out(C_out));
++ multiplicador m0(.clk(clk), .init(init), .MR(r_bitsA), .MD(r_bitsB), .done(done), .pp(resul_mult));
++ decoder deco(.num(resul), .Sseg(dis));
 
 ## 3. Descripción de los Módulos:
 
