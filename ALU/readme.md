@@ -80,7 +80,7 @@ El módulo decoder convierte el resultado en un formato que puede ser mostrado e
 ```verilog
 decoder deco(.num(resul), .Sseg(dis));
 ```
-## 7. TestBenchs
+## 7. Testbench:
 
 ![simulación](/imagenes/alutest.png)
 
