@@ -51,6 +51,7 @@ decoder deco(.num(resul), .Sseg(dis));
 
 El bloque `always` determina qué operación realiza la ALU según el valor de `OP`:
 
+```verilog
 always @(*) begin
 	case (OP)
 		2'b00: resul <= {2'b0, resul_sum};  // Suma
@@ -60,23 +61,25 @@ always @(*) begin
 		default: resul <= 'b00000;
 	endcase
 end
+```
 
-Suma (OP = 00): El resultado de la suma (resul_sum) se asigna a resul, extendiendo los 4 bits de resul_sum a 6 bits.
-Resta (OP = 01): El resultado de la resta (resul_res) se asigna a resul, también extendido a 6 bits.
-Multiplicación (OP = 10): El resultado de la multiplicación (resul_mult) se asigna directamente a resul.
-Operación AND (OP = 11): Se asigna el resultado de la operación lógica AND entre A y B a resul.
-Default: Si ninguna operación es seleccionada, se asigna 00000 a resul.
++ Suma (OP = 00): El resultado de la suma (resul_sum) se asigna a resul, extendiendo los 4 bits de resul_sum a 6 bits.
++ Resta (OP = 01): El resultado de la resta (resul_res) se asigna a resul, también extendido a 6 bits.
++ Multiplicación (OP = 10): El resultado de la multiplicación (resul_mult) se asigna directamente a resul.
++ Operación AND (OP = 11): Se asigna el resultado de la operación lógica AND entre A y B a resul.
++ Default: Si ninguna operación es seleccionada, se asigna 00000 a resul.
 
 ## 5. Multiplicación Secuencial:
 La multiplicación se realiza en un módulo aparte y utiliza solo los 3 bits más bajos de A y B para calcular el producto. Esto se hace asignando las variables r_bitsA y r_bitsB:
-
+```verilog
 assign r_bitsA = A[2:0];
 assign r_bitsB = B[2:0];
+```
 ## 6. Decodificación:
 El módulo decoder convierte el resultado en un formato que puede ser mostrado en un display de 7 segmentos:
-
+```verilog
 decoder deco(.num(resul), .Sseg(dis));
-
+```
 
 
 
