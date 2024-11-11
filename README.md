@@ -18,7 +18,7 @@ Este repositorio contiene los laboratorios esenciales para el desarrollo de un s
 2. [decodificador](/Decodificador/readme.md)
 
 ## Corte 3
-1. [Banco de registros]()
+1. [Banco de registros](Banco/readme.md)
 2. [Procesador MIPS](BancoDeRegistros/Readme.md)
 3. [INvestigación MIS]()
 # Referencias
