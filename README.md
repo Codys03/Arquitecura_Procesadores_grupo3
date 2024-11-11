@@ -17,7 +17,10 @@ Este repositorio contiene los laboratorios esenciales para el desarrollo de un s
 1. [ALU](ALU/readme.md)
 2. [decodificador](/Decodificador/readme.md)
 
-
+## Corte 3
+1. [Banco de registros]()
+2. [Procesador MIPS](BancoDeRegistros/Readme.md)
+3. [INvestigación MIS]()
 # Referencias
 
 [1] D. Natali, "ECCI Arquitectura de Procesadores 2024-II," Repositorio en GitHub, 2024. [En línea]. Disponible en: https://github.com/DianaNatali/ECCI-Arquitectura-de-Procesadores-2024-II.git.
